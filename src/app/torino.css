@@ -1,0 +1,1659 @@
+:root {
+  --torino-green: #28a745;
+  --torino-green-dark: #10411b;
+  --torino-ink: #282828;
+  --torino-muted: #595959;
+  --torino-price: #009eca;
+  --torino-soft: rgba(40, 40, 40, 0.7);
+  --torino-page: 1440px;
+  --torino-gutter: 126px;
+  --torino-content: 1188px;
+}
+
+.torino-num {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+
+.torino-logo {
+  width: 146px;
+  height: 44px;
+  object-fit: contain;
+  object-position: right center;
+}
+
+@media (min-width: 768px) {
+  .torino-logo {
+    width: 164px;
+    height: 50px;
+  }
+}
+
+.torino-page {
+  width: min(100%, var(--torino-page));
+  margin-inline: auto;
+}
+
+.torino-gutter {
+  padding-inline: 16px;
+}
+
+@media (min-width: 768px) {
+  .torino-gutter {
+    padding-inline: 40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .torino-gutter {
+    padding-inline: 80px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .torino-gutter {
+    padding-inline: var(--torino-gutter);
+  }
+}
+
+.torino-header {
+  height: 74px;
+  background: #fff;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.16);
+}
+
+.torino-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: 24px;
+}
+
+.torino-header__nav {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  width: 499px;
+  max-width: 100%;
+  font-size: 16px;
+  line-height: normal;
+  color: var(--torino-ink);
+}
+
+.torino-header__nav a.is-active {
+  color: var(--torino-green);
+}
+
+.torino-header__actions {
+  direction: ltr;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.torino-header__menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  color: var(--torino-ink);
+}
+
+.torino-header__login {
+  direction: rtl;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 2px solid var(--torino-green);
+  border-radius: 8px;
+  color: var(--torino-green);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  background: #fff;
+}
+
+.torino-header__login img {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.torino-hero {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .torino-hero {
+    height: 350px;
+  }
+
+  .torino-header__nav {
+    display: flex;
+  }
+}
+
+.torino-headline {
+  margin-top: 17px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--torino-muted);
+}
+
+.torino-headline span {
+  color: var(--torino-green);
+}
+
+@media (min-width: 768px) {
+  .torino-headline {
+    font-size: 28px;
+  }
+}
+
+.torino-search {
+  width: min(100%, 874px);
+  margin-inline: auto;
+  min-height: 71px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  padding: 10px 18px 10px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.torino-search__fields {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+}
+
+@media (min-width: 900px) {
+  .torino-search {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+  }
+
+  .torino-search__fields {
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-inline-end: 127px;
+  }
+}
+
+.torino-search__btn {
+  width: 100%;
+  height: 51px;
+  border-radius: 16px;
+  background: var(--torino-green);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (min-width: 900px) {
+  .torino-search__btn {
+    width: 190px;
+    flex-shrink: 0;
+  }
+}
+
+.torino-search__field {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;   gap: 8px;
+  min-height: 44px;
+  padding: 8px;
+  min-width: 81px;
+  width: 100%;
+}
+
+.torino-search__field select,
+.torino-search__field .rmdp-input {
+  border: 0 !important;
+  outline: none;
+  background-color: transparent;
+  font-size: 15px;
+  color: var(--torino-ink);
+  text-align: right;
+  direction: rtl;
+  width: auto;
+  max-width: 100%;
+  flex: 0 1 auto;
+}
+
+.torino-search__field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' stroke='%23282828' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-inline-start: 18px;
+  cursor: pointer;
+}
+
+.torino-search__field .rmdp-container,
+.torino-search__field .torino-search__date {
+  width: auto !important;
+  flex: 0 1 auto;
+}
+
+.torino-search__field .rmdp-input {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .torino-search__field select,
+  .torino-search__field .rmdp-input {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .torino-search__field .rmdp-container,
+  .torino-search__field .torino-search__date {
+    width: 100% !important;
+    flex: 1 1 auto;
+  }
+}
+
+.torino-search__divider {
+  display: none;
+  width: 1px;
+  height: 56px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 900px) {
+  .torino-search__divider {
+    display: block;
+  }
+}
+
+.torino-tours-title {
+  font-size: 28px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .torino-tours-title {
+    font-size: 32px;
+  }
+}
+
+.torino-tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px 15px;
+  justify-items: center;
+}
+
+@media (min-width: 1280px) {
+  .torino-tour-grid {
+    grid-template-columns: repeat(4, 278px);
+    justify-content: space-between;
+  }
+}
+
+.torino-card {
+  width: 100%;
+  max-width: 278px;
+  height: 277px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.torino-card__img {
+  position: relative;
+  height: 159px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.torino-card__body {
+  padding: 8px 10px 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.torino-card__title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #000;
+  line-height: normal;
+}
+
+.torino-card__meta {
+  margin-top: 10px;
+  font-size: 15px;
+  color: var(--torino-soft);
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.torino-card__foot {
+  margin-top: auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+    direction: ltr;
+}
+
+.torino-card__foot .torino-card__price {
+  direction: rtl;
+}
+
+.torino-card__price {
+  font-size: 16px;
+  color: var(--torino-price);
+  line-height: normal;
+}
+
+.torino-card__price span {
+  font-size: 12px;
+  color: rgba(40, 40, 40, 0.8);
+}
+
+.torino-card__btn {
+  width: 64px;
+  height: 25px;
+  border-radius: 4px;
+  background: var(--torino-green);
+  color: #fff;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.torino-banner {
+  width: 100%;
+  max-width: 1188px;
+  margin-inline: auto;
+  min-height: 251px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  background: #fff;
+    direction: ltr;
+}
+
+@media (min-width: 900px) {
+  .torino-banner {
+    grid-template-columns: 319px 1fr;
+  }
+}
+
+.torino-banner__side {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 16px;
+}
+
+.torino-banner__phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+    direction: ltr;
+}
+
+.torino-banner__more {
+  width: 175px;
+  height: 41px;
+  border-radius: 9px;
+  background: var(--torino-green-dark);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.torino-banner__main {
+  position: relative;
+  min-height: 220px;
+  color: #fff;
+    direction: ltr;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 24px 40px 24px 16px;
+  background: var(--torino-green);
+}
+
+.torino-banner__copy {
+  direction: rtl;
+  text-align: right;
+  flex: 1;
+  min-width: 0;
+}
+
+.torino-banner__copy h2 {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.torino-banner__copy h2 span {
+  color: var(--torino-green-dark);
+}
+
+.torino-banner__copy p {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+@media (min-width: 900px) {
+  .torino-banner__copy h2 {
+    font-size: 48px;
+  }
+
+  .torino-banner__copy p {
+    font-size: 32px;
+  }
+}
+
+.torino-banner__guy {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 900px) {
+  .torino-banner__guy {
+    width: 308px;
+    height: 225px;
+  }
+}
+
+.torino-why {
+  display: grid;
+  gap: 40px;
+}
+
+@media (min-width: 1024px) {
+  .torino-why {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.torino-why__title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--torino-ink);
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .torino-why__title {
+    font-size: 40px;
+  }
+}
+
+.torino-why__title .green {
+  color: var(--torino-green);
+}
+
+.torino-why__sub {
+  margin-top: 28px;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--torino-ink);
+}
+
+.torino-why__body {
+  margin-top: 24px;
+  max-width: 517px;
+  font-size: 20px;
+  line-height: 2.2;
+  text-align: justify;
+  color: var(--torino-ink);
+}
+
+.torino-why__stack {
+  position: relative;
+  height: 420px;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .torino-why__stack {
+    height: 520px;
+  }
+}
+
+.torino-why__card {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 35px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.torino-why__pager {
+    direction: ltr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 16px;
+  font-size: 24px;
+  color: var(--torino-ink);
+}
+
+.torino-features {
+  display: grid;
+  gap: 28px;
+  padding-bottom: 40px;
+  }
+
+@media (min-width: 768px) {
+  .torino-features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.torino-feature h4 {
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--torino-ink);
+}
+
+.torino-feature p {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--torino-ink);
+  max-width: 248px;
+}
+
+.torino-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.torino-footer__cols {
+  display: grid;
+  gap: 32px;
+  padding-block: 40px;
+}
+
+@media (min-width: 900px) {
+  .torino-footer__cols {
+    grid-template-columns: 1fr 1fr 1.4fr;
+  }
+}
+
+.torino-footer h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--torino-ink);
+  margin-bottom: 24px;
+}
+
+.torino-footer ul {
+  display: grid;
+  gap: 16px;
+}
+
+.torino-footer a {
+  font-size: 18px;
+  color: var(--torino-ink);
+}
+
+.torino-footer__copy {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-block: 16px;
+  text-align: center;
+  font-size: 15px;
+  color: #000;
+}
+
+.torino-detail {
+  background: #fff;
+  padding-block: 40px 56px;
+}
+
+.torino-detail__card {
+  width: 100%;
+  max-width: 1188px;
+  margin-inline: auto;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+}
+
+@media (min-width: 1024px) {
+  .torino-detail__card {
+    padding: 28px 30px 24px;
+  }
+}
+
+.torino-detail__top {
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 1024px) {
+  .torino-detail__top {
+        grid-template-columns: 397px 1fr;
+    gap: 40px;
+    align-items: stretch;
+    min-height: 265px;
+  }
+}
+
+.torino-detail__img {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .torino-detail__img {
+    height: 265px;
+  }
+}
+
+.torino-detail__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.torino-detail__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #282828;
+  line-height: normal;
+}
+
+@media (min-width: 768px) {
+  .torino-detail__title {
+    font-size: 32px;
+  }
+}
+
+.torino-detail__days {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(40, 40, 40, 0.7);
+}
+
+.torino-detail__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+  margin-top: 22px;
+}
+
+.torino-detail__feature {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  color: rgba(40, 40, 40, 0.6);
+}
+
+.torino-detail__feature img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.55;
+  filter: grayscale(1);
+}
+
+.torino-detail__cta {
+  margin-top: auto;
+  padding-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  }
+
+.torino-detail__price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #009eca;
+  line-height: 1;
+}
+
+.torino-detail__price span {
+  margin-inline-start: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(40, 40, 40, 0.8);
+}
+
+.torino-detail__btn {
+  width: 204px;
+  height: 48px;
+  border-radius: 10px;
+  background: #28a745;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.torino-detail__meta {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 8px;
+}
+
+@media (min-width: 900px) {
+  .torino-detail__meta {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+  }
+}
+
+.torino-detail__meta-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding-inline: 10px;
+  min-width: 0;
+}
+
+@media (min-width: 900px) {
+  .torino-detail__meta-item:not(:last-child) {
+    border-inline-end: 1px solid rgba(0, 0, 0, 0.12);
+  }
+}
+
+.torino-detail__meta-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  color: rgba(40, 40, 40, 0.55);
+}
+
+.torino-detail__meta-label img {
+  width: 18px;
+  height: 18px;
+}
+
+.torino-detail__meta-value {
+  font-size: 16px;
+  font-weight: 500;
+  color: #282828;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.torino-checkout {
+  background: #f8f8f8;
+  padding-block: 40px 56px;
+}
+
+.torino-checkout__grid {
+  width: 100%;
+  max-width: 1188px;
+  margin-inline: auto;
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 1024px) {
+  .torino-checkout__grid {
+        grid-template-columns: 1fr 280px;
+    align-items: start;
+  }
+}
+
+.torino-checkout__summary,
+.torino-checkout__form {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.torino-checkout__summary {
+  padding: 22px 20px;
+}
+
+.torino-checkout__summary-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #282828;
+}
+
+.torino-checkout__summary-days {
+  margin-top: 8px;
+  font-size: 15px;
+  color: rgba(40, 40, 40, 0.6);
+}
+
+.torino-checkout__dash {
+  margin-block: 18px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.25);
+}
+
+.torino-checkout__final {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 16px;
+  color: #282828;
+  }
+
+.torino-checkout__final strong {
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-size: 20px;
+  font-weight: 700;
+  color: #009eca;
+}
+
+.torino-checkout__final strong span {
+  margin-inline-start: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #282828;
+}
+
+.torino-checkout__pay {
+  margin-top: 22px;
+  width: 100%;
+  height: 48px;
+  border-radius: 10px;
+  background: #28a745;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.torino-checkout__form {
+  padding: 24px 22px 28px;
+}
+
+.torino-checkout__form-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #282828;
+}
+
+.torino-checkout__form-head img {
+  width: 24px;
+  height: 24px;
+}
+
+.torino-checkout__fields {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .torino-checkout__fields {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .torino-checkout__fields .torino-field--gender {
+    grid-column: span 1;
+    max-width: 220px;
+  }
+}
+
+.torino-field input,
+.torino-field select {
+  width: 100%;
+  height: 48px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 0 14px;
+  font-size: 14px;
+  color: #282828;
+  background: #fff;
+  outline: none;
+  direction: rtl;
+  text-align: right;
+}
+
+.torino-field input:focus,
+.torino-field select:focus {
+  border-color: #28a745;
+}
+
+.torino-field input::placeholder {
+  color: rgba(40, 40, 40, 0.45);
+  direction: rtl;
+  text-align: right;
+}
+
+.torino-field__err {
+  margin-top: 6px;
+  display: block;
+  font-size: 12px;
+  color: #e11d48;
+}
+
+.torino-field--date {
+  position: relative;
+}
+
+.torino-field--date img {
+  position: absolute;
+  inset-inline-end: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.torino-field--date input {
+  padding-inline-end: 36px;
+}
+
+.torino-profile {
+  background: #fff;
+  padding-block: 20px 40px;
+}
+
+@media (min-width: 900px) {
+  .torino-profile {
+    padding-block: 36px 56px;
+  }
+}
+
+.torino-profile__grid {
+  width: 100%;
+  max-width: 1188px;
+  margin-inline: auto;
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 900px) {
+  .torino-profile__grid {
+        grid-template-columns: 248px 1fr;
+    align-items: start;
+    gap: 20px;
+  }
+}
+
+.torino-profile-nav {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.torino-profile-nav__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (min-width: 900px) {
+  .torino-profile-nav__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.torino-profile-nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 64px;
+  padding: 10px 6px;
+  font-size: 12px;
+  line-height: 1.3;
+  text-align: center;
+  color: #282828;
+  border-inline-end: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.torino-profile-nav__link:last-child {
+  border-inline-end: 0;
+}
+
+.torino-profile-nav__link img {
+  width: 22px;
+  height: 22px;
+}
+
+.torino-profile-nav__label-full {
+  display: none;
+}
+
+.torino-profile-nav__label-short {
+  display: block;
+}
+
+.torino-profile-nav__link.is-active {
+  background: rgba(40, 167, 69, 0.12);
+  color: #28a745;
+  font-weight: 600;
+  box-shadow: inset 0 -3px 0 #28a745;
+}
+
+.torino-profile-nav__link.is-active img {
+  filter: invert(42%) sepia(78%) saturate(468%) hue-rotate(79deg) brightness(93%) contrast(92%);
+}
+
+@media (min-width: 900px) {
+  .torino-profile-nav__link {
+    flex-direction: row;
+    justify-content: flex-start;
+    min-height: 0;
+    padding: 16px 18px;
+    font-size: 16px;
+    text-align: right;
+    border-inline-end: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .torino-profile-nav__link:last-child {
+    border-bottom: 0;
+  }
+
+  .torino-profile-nav__link.is-active {
+    box-shadow: inset -3px 0 0 #28a745;
+  }
+
+  .torino-profile-nav__label-full {
+    display: inline;
+  }
+
+  .torino-profile-nav__label-short {
+    display: none;
+  }
+}
+
+.torino-profile-card {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  background: #fff;
+  padding: 20px 22px 22px;
+}
+
+.torino-profile-card + .torino-profile-card {
+  margin-top: 16px;
+}
+
+.torino-profile-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.torino-profile-card__head h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #282828;
+}
+
+.torino-profile-edit {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #009eca;
+}
+
+.torino-profile-rows {
+  display: grid;
+  gap: 14px 40px;
+}
+
+@media (min-width: 768px) {
+  .torino-profile-rows {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.torino-profile-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 6px 10px;
+  font-size: 15px;
+  color: #282828;
+  line-height: 1.7;
+}
+
+.torino-profile-row__label {
+  color: rgba(40, 40, 40, 0.55);
+  flex-shrink: 0;
+}
+
+.torino-profile-row__value {
+  font-weight: 500;
+  color: #282828;
+}
+
+.torino-profile-account-edit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+}
+
+.torino-profile-account-edit__email {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1 1 280px;
+  max-width: 460px;
+}
+
+.torino-profile-account-edit__email .torino-field {
+  flex: 1;
+  min-width: 0;
+}
+
+.torino-profile-account-edit__email .torino-btn-primary {
+  height: 48px;
+  min-width: 88px;
+}
+
+.torino-profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+@media (min-width: 768px) {
+  .torino-profile-actions {
+    justify-content: flex-end;
+  }
+}
+
+.torino-btn-primary {
+  min-width: 96px;
+  height: 40px;
+  padding-inline: 20px;
+  border-radius: 5px;
+  background: #28a745;
+  color: #fff;
+  font-size: 15px;
+}
+
+.torino-btn-ghost {
+  min-width: 96px;
+  height: 40px;
+  padding-inline: 20px;
+  border-radius: 5px;
+  border: 1px solid #28a745;
+  color: #28a745;
+  background: #fff;
+  font-size: 15px;
+}
+
+.torino-tour-book {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  padding: 16px 18px;
+}
+
+.torino-tour-book + .torino-tour-book {
+  margin-top: 14px;
+}
+
+.torino-tour-book__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.torino-tour-book__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #282828;
+}
+
+.torino-tour-book__vehicle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: rgba(40, 40, 40, 0.7);
+}
+
+.torino-badge {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding-inline: 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.torino-badge--done {
+  background: rgba(40, 167, 69, 0.14);
+  color: #28a745;
+}
+
+.torino-badge--live {
+  background: #fff4e5;
+  color: #d97706;
+}
+
+.torino-tour-book__route {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #282828;
+}
+
+.torino-tour-book__dates {
+  margin-top: 6px;
+  font-size: 13px;
+  color: rgba(40, 40, 40, 0.6);
+}
+
+.torino-tour-book__foot {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 14px;
+  color: #282828;
+}
+
+.torino-tx-cards {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+}
+
+.torino-tx-card {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.torino-tx-card__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.torino-tx-card__row span {
+  color: rgba(40, 40, 40, 0.55);
+  flex-shrink: 0;
+}
+
+.torino-tx-card__row strong {
+  font-weight: 500;
+  color: #282828;
+  text-align: left;
+  word-break: break-word;
+}
+
+.torino-tx-table-wrap {
+  display: none;
+  overflow-x: auto;
+}
+
+@media (min-width: 768px) {
+  .torino-tx-cards {
+    display: none;
+  }
+
+  .torino-tx-table-wrap {
+    display: block;
+  }
+}
+
+.torino-tx-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.torino-tx-table thead th {
+  background: #f5f5f5;
+  color: #282828;
+  font-weight: 500;
+  text-align: center;
+  padding-block: 14px;
+  padding-inline: 16px;
+}
+
+.torino-tx-table thead th:first-child {
+  border-start-start-radius: 10px;
+  padding-inline-start: 24px;
+}
+
+.torino-tx-table thead th:last-child {
+  border-start-end-radius: 10px;
+  padding-inline-end: 24px;
+}
+
+.torino-tx-table tbody td {
+  text-align: center;
+  padding-block: 16px;
+  padding-inline: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  color: #282828;
+  vertical-align: middle;
+}
+
+.torino-tx-table tbody td:first-child {
+  padding-inline-start: 24px;
+}
+
+.torino-tx-table tbody td:last-child {
+  padding-inline-end: 24px;
+}
+
+.torino-tx-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .torino-header__login {
+    font-size: 14px;
+    gap: 6px;
+    padding: 6px 10px;
+  }
+
+  .torino-header__login img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .torino-header__menu svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .torino-logo {
+    width: 120px;
+    height: 36px;
+  }
+
+  .torino-search {
+    padding: 8px 12px 12px;
+  }
+
+  .torino-search__field:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .torino-search__fields {
+    gap: 0;
+  }
+
+  .torino-detail__btn,
+  .torino-checkout__pay {
+    width: 100%;
+  }
+
+  .torino-detail__price {
+    font-size: 22px;
+  }
+
+  .torino-detail__cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .torino-detail__meta {
+    direction: rtl;
+    text-align: right;
+  }
+
+  .torino-detail__title,
+  .torino-detail__days,
+  .torino-detail__features {
+    text-align: right;
+  }
+
+  .torino-detail__price {
+    text-align: right;
+    width: 100%;
+  }
+
+  .torino-detail__meta-item {
+    align-items: flex-start;
+    text-align: right;
+  }
+
+  .torino-banner {
+    direction: rtl;
+  }
+
+  .torino-banner__side {
+    order: 2;
+  }
+
+  .torino-banner__main {
+    order: 1;
+    direction: rtl;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 20px 16px;
+  }
+
+  .torino-banner__copy {
+    width: 100%;
+    text-align: right;
+  }
+
+  .torino-banner__copy h2 {
+    font-size: 24px;
+  }
+
+  .torino-banner__copy p {
+    font-size: 18px;
+  }
+
+  .torino-banner__guy {
+    width: 160px;
+    height: 150px;
+    margin-inline: auto;
+    order: -1;
+  }
+
+  .torino-banner__phone {
+    font-size: 22px;
+  }
+
+  .torino-card {
+    max-width: none;
+  }
+
+  .torino-card__title,
+  .torino-card__meta {
+    text-align: right;
+  }
+
+  .torino-tours-title {
+    text-align: right;
+    font-size: 24px;
+  }
+
+  .torino-profile-card {
+    padding: 16px;
+  }
+
+  .torino-profile-card__head {
+    text-align: right;
+  }
+
+  .torino-profile-row {
+    direction: rtl;
+    text-align: right;
+  }
+
+  .torino-profile-account-edit {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .torino-profile-account-edit__email {
+    max-width: none;
+    width: 100%;
+  }
+
+  .torino-tx-card__row {
+    direction: rtl;
+    text-align: right;
+  }
+
+  .torino-tour-book__top {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: right;
+  }
+
+  .torino-tour-book__foot {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: right;
+  }
+
+  .torino-checkout__grid {
+    direction: rtl;
+  }
+
+  .torino-checkout__summary,
+  .torino-checkout__form {
+    text-align: right;
+  }
+
+  .torino-checkout__summary-title {
+    font-size: 20px;
+  }
+
+  .torino-checkout__form-head {
+    font-size: 20px;
+  }
+
+  .torino-checkout__fields {
+    direction: rtl;
+  }
+
+  .torino-field input,
+  .torino-field select {
+    text-align: right;
+    direction: rtl;
+  }
+
+  .torino-why {
+    direction: rtl;
+  }
+
+  .torino-why__title {
+    font-size: 26px;
+  }
+
+  .torino-why__sub,
+  .torino-why__body {
+    text-align: right;
+  }
+
+  .torino-feature {
+    flex-direction: row;
+    text-align: right;
+  }
+
+  .torino-feature h4 {
+    font-size: 20px;
+  }
+
+  .torino-footer__cols {
+    direction: rtl;
+    text-align: right;
+  }
+}
