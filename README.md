@@ -118,22 +118,3 @@ NEXT_PUBLIC_API_URL=http://localhost:6500
 | `/profile/tours` | تورهای من |
 | `/profile/transactions` | تراکنش‌ها |
 | `/about` `/services` `/contact` | صفحات معرفی |
-
-## اسکریپت‌ها
-
-```bash
-npm run dev      # اجرای محیط توسعه
-npm run build    # ساخت نسخه production
-npm run start    # اجرای نسخه build شده
-npm run lint     # بررسی ESLint
-```
-
-## نکات مهم
-
-- برای لاگین، رزرو و پروفایل حتماً API روی `6500` روشن باشد.
-- اعداد و شماره تلفن در UI به‌صورت ارقام فارسی نمایش داده می‌شوند.
-- پروژه کاملاً RTL است و برای موبایل و دسکتاپ بهینه شده.
-
-## توسعه‌دهنده
-
-- GitHub: [MuhammedMahdii](https://github.com/MuhammedMahdii)
