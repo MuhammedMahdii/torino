@@ -107,8 +107,6 @@ http://localhost:3000
 NEXT_PUBLIC_API_URL=http://localhost:6500
 ```
 
-> فقط همین متغیر برای اتصال به API لازم است. فایل `.env.local` را commit نکنید.
-
 ## صفحات اصلی
 
 | مسیر | توضیح |
